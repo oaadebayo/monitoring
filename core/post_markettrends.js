@@ -7,7 +7,8 @@ function create_markettrends(req, res){
         "marketname" : req.body.marketname,
         "producename" : req.body.producename,
         "price" : req.body.price,
-        "quantity" : req.body.quantity
+        "quantity" : req.body.quantity,
+        "username": (req.session.username ? req.session.username : null), //this just checks if req.session.username is not null or empty and uses null if it is, just as a failsafe, it ought not to be empty or null
     } 
     console.log(markettrendsdets)
     pool.query("INSERT INTO marketmonitoring SET ?", markettrendsdets, function(error, lastId, fields){
