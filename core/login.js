@@ -21,6 +21,7 @@ function user_login (req, res){
             }else{
                 if (results.length>0){
                     if (results[0].password ==password ){
+                        req.session.username = username; // set the session username for this particular user
                         res.render('index2',{
                             code: 200,
                             success: 'login successful',

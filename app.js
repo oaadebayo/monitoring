@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname,'views')));
 //app.use('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-//session
+//session -- this enables session handling in your app
 app.use(session({
     secret: 'ards',
     resave: false,
