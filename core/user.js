@@ -3,9 +3,10 @@ const session = require('express-session');
 const pool = require('./pool');
 const bcrypt = require('bcryptjs');
 const mysql = require('mysql');
-app.use(session({secret: 'ssshhhhh'}));
-var sess;
-sess = req.session;
+//const app = express();
+//app.use(session({secret: 'ssshhhhh'}));
+// var sess;
+// sess = req.session;
     //This function will insert data into the database (create a new user)
     //body is an object
 
