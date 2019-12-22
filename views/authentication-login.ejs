@@ -44,9 +44,9 @@
                     <div class="text-center p-t-20 p-b-20">
                         <span class="db"><img src="assets/images/logo.png" alt="logo" /></span>
                     </div>
-                    <% if (message) { %>
-                        <h5><%= message %></h5>
-                    <% } %>
+                    <%# if (message) { %>
+                        <h5><%#= message %></h5>
+                    <%# } %>
                     <!-- Form -->
                     <form class="form-horizontal m-t-20" id="loginform" action="/login" method="POST">
                         <div class="row p-b-30">
@@ -61,7 +61,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Password" name="password" aria-label="Password" aria-describedby="basic-addon1" required="">
+                                    <input type="password" class="form-control form-control-lg" placeholder="Password" name="password" aria-label="Password" aria-describedby="basic-addon1" required="">
                                 </div>
                             </div>
                         </div>
