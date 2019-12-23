@@ -4,6 +4,7 @@ const createUser = require('../core/user');
 const createMarketTrend = require('../core/post_markettrends');
 const userLogin = require('../core/login');
 const userLogout = require('../core/logout');
+const selectPosts = require('../core/select_posts');
 const path = require('path');
 const router = express.Router();
 
@@ -17,6 +18,12 @@ router.get('/', (req, res, next)=>{
 router.get('/home', (req, res, next)=>{
     res.render('authentication-register', {title:"ARDSMONITORING"});
 })
+
+router.get('/tables', (req, res, next)=>{
+    selectPosts(req, res);
+    
+})
+
 // Get registration page
 router.post('/register', function(req, res){
     createUser(req, res);

@@ -486,15 +486,39 @@
                                     <table id="zero_config" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
+                                                <!-- <th>Name</th>
                                                 <th>Position</th>
                                                 <th>Office</th>
                                                 <th>Age</th>
                                                 <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Salary</th> -->
+
+                                                <th>Market Name</th>
+                                                <th>Produce Name</th>
+                                                <th>Date</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                                <th>ID</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <% if (data.length > 0) { %>
+                                                <%  console.log("----", data); %> 
+                                                <%  for (let index = 0; index < data.length; index++) { %> 
+                                                    <%  var info = data[index]; %>
+                                                    <%  console.log("----ds", info.marketname); %> 
+                                                    <tr>
+                                                    <td> <%= info.marketname %></td>
+                                                    <td><%= info.producename %></td>
+                                                    <td><%#= info.date %> <%= new Date(info.date).toDateString() %></td>
+                                                    <td> ₦ <%= info.price %></td>
+                                                    <td><%= info.quantity %></td>
+                                                     <td><%= info.id %></td> 
+                                                    </tr>
+                                                    <% } %>
+                                            <% } %>
+
+                                            <!--
                                             <tr>
                                                 <td>Tiger Nixon</td>
                                                 <td>System Architect</td>
@@ -951,15 +975,23 @@
                                                 <td>2011/01/25</td>
                                                 <td>$112,000</td>
                                             </tr>
+
+                                        -->
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Name</th>
+                                                <!-- <th>Name</th>
                                                 <th>Position</th>
                                                 <th>Office</th>
                                                 <th>Age</th>
                                                 <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Salary</th> -->
+                                                <th>Market Name</th>
+                                                <th>Produce Name</th>
+                                                <th>Date</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                                <th>ID</th>
                                             </tr>
                                         </tfoot>
                                     </table>
